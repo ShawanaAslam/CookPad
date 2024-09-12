@@ -1,5 +1,11 @@
+//import 'package:cookpad/view/Starting_screens/splash_screen/splash_view.dart';
+import 'package:cookpad/src/view/Starting_views/splash_view/splash_view.dart';
+import 'package:cookpad/src/view/auth_views/login_view/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'src/view/auth_views/signup_view/signup_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +20,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(390,444),
       builder:(context,child){
-        return MaterialApp(
+        return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
@@ -36,7 +42,11 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          home:
+          //SignUpView()
+          //LoginView()
+          SplashView()
+          //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
       } ,
     );
