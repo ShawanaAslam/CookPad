@@ -1,6 +1,7 @@
 //import 'package:cookpad/view/Starting_screens/splash_screen/splash_view.dart';
 import 'package:cookpad/src/view/Starting_views/splash_view/splash_view.dart';
 import 'package:cookpad/src/view/auth_views/login_view/login_view.dart';
+import 'package:cookpad/src/view/auth_views/search_view/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(390,444),
+      designSize: Size(375, 823),
       builder:(context,child){
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
@@ -43,9 +44,10 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           home:
+            SearchView()
           //SignUpView()
           //LoginView()
-          SplashView()
+          //SplashView()
           //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
       } ,

@@ -67,6 +67,7 @@ flutter:
     - assets/icons/splashIcon.png
     - assets/icons/fb.png
     - assets/icons/gmail.png
+    - assets/images/bowl.jpeg
     #- assets/icons/splashIcon.png
     #- assets/icons/fb.svg
 

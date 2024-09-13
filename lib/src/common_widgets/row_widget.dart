@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class RowWidget extends StatelessWidget {
   String txt;
-   RowWidget({super.key,required this.txt});
+  double? fntsze;
+   RowWidget({super.key,required this.txt,this.fntsze});
 
   @override
   Widget build(BuildContext context) {

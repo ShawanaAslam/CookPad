@@ -34,41 +34,43 @@ class _LoginViewState extends State<LoginView> {
       Padding(
        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 70),
        child:
-      Column(
-       //  mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-
-            TextWidget(txt: "Hello,",fntsze: 30,),
-
-            SizedBox(height: 3,),
-            TextWidget(txt: 'Welcome Back!',fntsze: 20,fntwt: FontWeight.w400,),
-
-            SizedBox(height: 30,),
-            RowWidget(txt: 'Email'),
-            SizedBox(height: 3,),
-            MyTextformfield(controller: emailController, hnttxt: 'Enter Email'),
+      SingleChildScrollView(
+        child: Column(
+         //  mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+        
+              TextWidget(txt: "Hello,",fntsze: 30,),
+        
+              SizedBox(height: 3,),
+              TextWidget(txt: 'Welcome Back!',fntsze: 20,fntwt: FontWeight.w400,),
+        
+              SizedBox(height: 30,),
+              RowWidget(txt: 'Email'),
+              SizedBox(height: 3,),
+              MyTextformfield(controller: emailController, hnttxt: 'Enter Email'),
+                SizedBox(height: 20,),
+              RowWidget(txt: 'Enter Pasword'),
+              SizedBox(height: 3,),
+              MyTextformfield(controller: pswordController, hnttxt: 'Enter Posword'),
+              SizedBox(height: 10,),
+              ForgetRowwidget(),
               SizedBox(height: 20,),
-            RowWidget(txt: 'Enter Pasword'),
-            SizedBox(height: 3,),
-            MyTextformfield(controller: pswordController, hnttxt: 'Enter Posword'),
-            SizedBox(height: 10,),
-            ForgetRowwidget(),
-            SizedBox(height: 20,),
-            MyButton(txt: 'Sign in', clr:AppColors.primaryColor,
-                ontap: ()
-                {
-                }),
-            SizedBox(height: 10,),
-            Center(child: TextWidget(txt: '--------- or Sign in With --------',fntsze: 11.sp,clr: Colors.grey,)),
-            SizedBox(height: 15,),
-            FloatingRow(),
-            SizedBox(height: 30,),
-            InkwellRow()
-
-            
-          ],
-        ),
+              MyButton(txt: 'Sign in', clr:AppColors.primaryColor,
+                  ontap: ()
+                  {
+                  }),
+              SizedBox(height: 10,),
+              Center(child: TextWidget(txt: '--------- or Sign in With --------',fntsze: 11.sp,clr: Colors.grey,)),
+              SizedBox(height: 15,),
+              FloatingRow(),
+              SizedBox(height: 30,),
+              InkwellRow()
+        
+              
+            ],
+          ),
+      ),
       )
     );
   }
