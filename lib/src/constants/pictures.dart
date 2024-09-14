@@ -8,4 +8,10 @@ class Pic{
   static String piza='assets/images/piza.jpeg';
   static String nodles='assets/images/nodles.jpeg';
   static String rice='assets/images/rice.jpeg';
+  static String icn='assets/icons/Inactive.png';
+  static String timer='assets/icons/timer.png';
+  static String share='assets/icons/share.png';
+  static String msg='assets/icons/message.png';
+  static String pop='assets/icons/pop.png';
+  static String burgr='assets/images/burgr.jpeg';
 }

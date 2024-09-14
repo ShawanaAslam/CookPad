@@ -9,9 +9,14 @@ class SearchContainer extends StatelessWidget {
   String txt1;
   double? fntsze;
   String path;
+  double? hght;
+  double? wdth;
+  String? txt2;
+  IconData? icon;
+  IconData? icon1;
 
    SearchContainer({super.key,required this.txt,required this.txt1,
-     this.fntsze,required this.path});
+     this.fntsze,required this.path,this.hght,this.wdth,this.txt2,this.icon,this.icon1});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +28,7 @@ class SearchContainer extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25.r),
           image: DecorationImage(
-            image: AssetImage(path)
+            image: AssetImage(path),fit: BoxFit.fill
           )
 
         ),
@@ -71,7 +76,23 @@ class SearchContainer extends StatelessWidget {
               SizedBox(height: 33,),
               Text(txt,style: GoogleFonts.poppins(fontSize: 11.sp,color: Colors.white,fontWeight: FontWeight.w600),),
               SizedBox(height: 5,),
-              Text(txt1,style: GoogleFonts.poppins(fontSize: 9.sp,color: AppColors.greyColor,fontWeight: FontWeight.w400),),
+              // Row(
+               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               //  children: [
+                  Text(txt1,style: GoogleFonts.poppins(fontSize: 9.sp,color: AppColors.greyColor,fontWeight: FontWeight.w400),),
+                 // Container(
+                 //   child: Row(
+                 //     children: [
+                 //       Icon(icon),
+                 //       Text(txt2!),
+                 //       CircleAvatar(
+                 //         child: Icon(icon1),
+                 //       )
+                 //     ],
+                 //   ),
+                // )
+                //],
+            //  ),
             ],
           ),
         ),

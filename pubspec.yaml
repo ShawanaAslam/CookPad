@@ -68,6 +68,12 @@ flutter:
     - assets/icons/fb.png
     - assets/icons/gmail.png
     - assets/images/bowl.jpeg
+    - assets/icons/Inactive.png
+    - assets/icons/timer.png
+    - assets/icons/share.png
+    - assets/icons/message.png
+    - assets/icons/pop.png
+    - assets/images/burgr.jpeg
     #- assets/icons/splashIcon.png
     #- assets/icons/fb.svg
 
