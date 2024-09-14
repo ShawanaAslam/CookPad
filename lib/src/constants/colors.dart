@@ -9,5 +9,5 @@ class AppColors {
   static const Color greyColor = Color(0xFFA9A9A9);
   static const Color blackColor = Color(0xFF121212);
   static const Color lightOrangeColor = Color(0xFFFFE1B3);
-  //static const Color whiteclr = Colors.white;
+  static const Color cardclr = Color(0xFFD9D9D9);
 }

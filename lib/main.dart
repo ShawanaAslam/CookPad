@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
           home:
             RecipeIngridentView()
            //SavedRecipeView()
-            //SearchView()
+           // SearchView()
           //SignUpView()
           //LoginView()
           //SplashView()

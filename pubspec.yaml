@@ -74,6 +74,13 @@ flutter:
     - assets/icons/message.png
     - assets/icons/pop.png
     - assets/images/burgr.jpeg
+    - assets/icons/filter.png
+    -  assets/images/boy.png
+    - assets/images/taco.png
+    - assets/images/tomato.png
+    - assets/images/slice.png
+    - assets/icons/top.png
+
     #- assets/icons/splashIcon.png
     #- assets/icons/fb.svg
 

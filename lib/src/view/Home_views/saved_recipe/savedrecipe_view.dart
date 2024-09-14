@@ -24,13 +24,13 @@ class _SavedRecipeViewState extends State<SavedRecipeView> {
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: SingleChildScrollView(
           child: Column(children: [
-          SavedContainer(txt: 'Traditional spare ribs \nbaked', txt1: 'By Chef John', path: Pic.piza,),
+          SavedContainer(txt: 'Traditional spare ribs \nbaked', txt1: 'By Chef John', path: Pic.piza,hght: 50,),
             SizedBox(height: 15,),
-            SavedContainer(txt: 'spice roasted chicken \nwith flavored rice', txt1: 'By Mark Kelvin', path: Pic.rice,),
+            SavedContainer(txt: 'spice roasted chicken \nwith flavored rice', txt1: 'By Mark Kelvin', path: Pic.rice,hght: 50,),
             SizedBox(height: 15,),
-            SavedContainer(txt: 'Spicy fried rice mix \nchicken bali', txt1: 'By Spicy Nelly', path: Pic.food,),
+            SavedContainer(txt: 'Spicy fried rice mix \nchicken bali', txt1: 'By Spicy Nelly', path: Pic.food,hght: 50,),
             SizedBox(height: 15,),
-            SavedContainer(txt: 'spice roasted chicken \nwith flavored rice', txt1: 'By Chef John', path: Pic.nodles,),
+            SavedContainer(txt: 'spice roasted chicken \nwith flavored rice', txt1: 'By Chef John', path: Pic.nodles,hght: 50,),
             SizedBox(height: 15,),
            
           

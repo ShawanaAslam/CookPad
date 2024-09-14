@@ -14,4 +14,11 @@ class Pic{
   static String msg='assets/icons/message.png';
   static String pop='assets/icons/pop.png';
   static String burgr='assets/images/burgr.jpeg';
+  static String boy='assets/images/boy.png';
+  static String filter='assets/icons/filter.png';
+  static String taco='assets/images/taco.png';
+  static String tomato='assets/images/tomato.png';
+  static String slice='assets/images/slice.png';
+  static String cabge='assets/images/cabge.png';
+  static String top='assets/icons/top.png';
 }

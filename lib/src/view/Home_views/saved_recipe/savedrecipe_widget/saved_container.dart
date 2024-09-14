@@ -5,19 +5,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SavedContainer extends StatelessWidget {
-  String txt;
-  String txt1;
+   String? txt;
+   String? txt1;
   double? fntsze;
   String path;
-  //double? hght;
+  double? hght;
   //double? wdth;
  // String? txt2;
   //IconData? icon;
 
 
-  SavedContainer({super.key, required this.txt, required this.txt1,
-    this.fntsze,required this.path,
-    //this.hght,this.wdth,
+  SavedContainer({super.key,  this.txt,  this.txt1,
+    this.fntsze,required this.path, this.hght,
+    // this.wdth,
     //this.txt2,
    // this.icon,
   });
@@ -66,26 +66,34 @@ class SavedContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      ElevatedButton(
-
-                          style: ElevatedButton.styleFrom(
-                              minimumSize: Size(37, 16)),
-                          onPressed: (){}, child:
-                      Row(children: [
-                        Icon(Icons.star,color: AppColors.orangeColor,size: 15,),
-                        SizedBox(width: 5,),
-                        Text('4.0',style: GoogleFonts.roboto(fontSize: 8.sp),)
-                      ],
-                      )),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Container(
+                          height: 16.sp,
+                          width:37.sp ,
+                          decoration: BoxDecoration(
+                            color: AppColors.lightOrangeColor,
+                            borderRadius: BorderRadius.circular(8)
+                          ),
+                          child:Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.star,color: AppColors.orangeColor,size: 12,),
+                              SizedBox(width: 2,),
+                              Text('4.0',style: GoogleFonts.roboto(fontSize: 8.sp),)
+                            ],
+                        )
+                          ),
+                      ),
                     ],
                   ),
-                  SizedBox(height: 25,),
-                  Text(txt,style: GoogleFonts.poppins(fontSize: 11.sp,color: Colors.white,fontWeight: FontWeight.w600),),
+                  SizedBox(height: hght,),
+                  Text(txt??'',style: GoogleFonts.poppins(fontSize: 11.sp,color: Colors.white,fontWeight: FontWeight.w600),),
                   //SizedBox(height: 5,),
                   Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                    children: [
-                  Text(txt1,style: GoogleFonts.poppins(fontSize: 9.sp,color: AppColors.greyColor,fontWeight: FontWeight.w400),),
+                  Text(txt1??'',style: GoogleFonts.poppins(fontSize: 9.sp,color: AppColors.greyColor,fontWeight: FontWeight.w400),),
                   Container(
                     child: Row(
                       children: [

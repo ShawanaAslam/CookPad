@@ -16,7 +16,9 @@ class SearchContainer extends StatelessWidget {
   IconData? icon1;
 
    SearchContainer({super.key,required this.txt,required this.txt1,
-     this.fntsze,required this.path,this.hght,this.wdth,this.txt2,this.icon,this.icon1});
+     this.fntsze,required this.path,
+     this.hght,
+     this.wdth,this.txt2,this.icon,this.icon1});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class SearchContainer extends StatelessWidget {
         width: 160.sp,
 
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.r),
+            borderRadius: BorderRadius.circular(15.r),
           image: DecorationImage(
             image: AssetImage(path),fit: BoxFit.fill
           )
@@ -37,6 +39,7 @@ class SearchContainer extends StatelessWidget {
           width: 160.sp,
           height: 150.sp,
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.r),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -60,39 +63,31 @@ class SearchContainer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  ElevatedButton(
-
-                    style: ElevatedButton.styleFrom(
-                        minimumSize: Size(37, 16)),
-                      onPressed: (){}, child:
-                  Row(children: [
-                    Icon(Icons.star,color: AppColors.orangeColor,size: 15,),
-                    SizedBox(width: 5,),
-                    Text('4.0',style: GoogleFonts.roboto(fontSize: 8.sp),)
-                  ],
-                  )),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 3),
+                    child: Container(
+                        height: 16.sp,
+                        width:37.sp ,
+                        decoration: BoxDecoration(
+                            color: AppColors.lightOrangeColor,
+                            borderRadius: BorderRadius.circular(8)
+                        ),
+                        child:Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.star,color: AppColors.orangeColor,size: 12,),
+                            SizedBox(width: 2,),
+                            Text('4.0',style: GoogleFonts.roboto(fontSize: 8.sp),)
+                          ],
+                        )
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(height: 33,),
+              SizedBox(height: hght,),
               Text(txt,style: GoogleFonts.poppins(fontSize: 11.sp,color: Colors.white,fontWeight: FontWeight.w600),),
               SizedBox(height: 5,),
-              // Row(
-               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-               //  children: [
                   Text(txt1,style: GoogleFonts.poppins(fontSize: 9.sp,color: AppColors.greyColor,fontWeight: FontWeight.w400),),
-                 // Container(
-                 //   child: Row(
-                 //     children: [
-                 //       Icon(icon),
-                 //       Text(txt2!),
-                 //       CircleAvatar(
-                 //         child: Icon(icon1),
-                 //       )
-                 //     ],
-                 //   ),
-                // )
-                //],
-            //  ),
             ],
           ),
         ),
