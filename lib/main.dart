@@ -6,6 +6,7 @@ import 'package:cookpad/src/view/Starting_views/splash_view/splash_view.dart';
 import 'package:cookpad/src/view/auth_views/login_view/login_view.dart';
 //import 'package:cookpad/src/view/auth_views/search_view/search_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -71,6 +72,77 @@ class WidgetOne extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ///----------------1st widget=------------------------------------------
+
+            Container(
+              height: 280,
+              width: 170,
+              //  color: Colors.amber,
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30.0),
+                    child: Container(
+                      height: 250,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade300,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Padding(
+                        padding: const EdgeInsets.only(bottom: 20.0, top: 70),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text('Classic Greek'),
+                                Text('Salad'),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 15.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    children: [Text('Time'), Text('15 Min')],
+                                  ),
+                                  CircleAvatar(
+                                    radius: 13,
+                                    backgroundColor: Colors.white,
+                                    child: Icon(
+                                      Icons.tag,
+                                      size: 15,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.amber,
+                    radius: 45,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            ///TODO:-----------------------------------2nd widget
+            ///
+            ///
             Container(
               //height: 150,
               width: double.infinity,
@@ -185,4 +257,3 @@ class WidgetOne extends StatelessWidget {
     );
   }
 }
-
