@@ -1,4 +1,5 @@
 //import 'package:cookpad/view/Starting_screens/splash_screen/splash_view.dart';
+import 'package:cookpad/src/view/Home_views/home_view/home_view.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_view.dart';
 import 'package:cookpad/src/view/Home_views/saved_recipe/savedrecipe_view.dart';
 import 'package:cookpad/src/view/Home_views/search_view/search_view.dart';
@@ -47,7 +48,9 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: WidgetOne()
+            home:
+            HomeView()
+            //WidgetOne()
             //    RecipeIngridentView()
             //SavedRecipeView()
             // SearchView()

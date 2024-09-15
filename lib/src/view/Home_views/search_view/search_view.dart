@@ -3,7 +3,7 @@ import 'package:cookpad/src/common_widgets/searchcontainer_widget.dart';
 import 'package:cookpad/src/common_widgets/text-widget.dart';
 import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
-import 'package:cookpad/src/view/Home_views/search_view/search_widget/searchRow.dart';
+import 'package:cookpad/src/common_widgets/searchRow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../constants/colors.dart';
-import '../../../../constants/pictures.dart';
+import '../constants/colors.dart';
+import '../constants/pictures.dart';
 
 class SearchRow extends StatelessWidget {
   const SearchRow({super.key});
@@ -22,7 +22,7 @@ class SearchRow extends StatelessWidget {
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Colors.grey, // Border color here
+                    color: AppColors.greyColor, // Border color here
                     width: 2.0, // Border width
                   ),
                   borderRadius: BorderRadius.circular(5),

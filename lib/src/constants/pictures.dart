@@ -21,4 +21,5 @@ class Pic{
   static String slice='assets/images/slice.png';
   static String cabge='assets/images/cabge.png';
   static String top='assets/icons/top.png';
+  static String child='assets/images/child.png';
 }
