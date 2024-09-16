@@ -71,30 +71,32 @@ class _RecipeIngridentViewState extends State<RecipeIngridentView> {
                   value: 'share',
                   child: ListTile(
                     leading:  Image.asset(Pic.share),
-                    trailing:TextWidget(txt: 'Share',fntsze: 14,),
+                    title:TextWidget(txt: 'Share',fntsze: 14,),
                   ),
                 ),
                 PopupMenuItem(
                   value: 'Rate Recipe',
                   child: ListTile(
                     leading:Icon(Icons.star),
-                    trailing:  TextWidget(txt: 'Rate Recipe',fntsze: 14,),
+                    title:  TextWidget(txt: 'Rate Recipe',fntsze: 14,),
                   ),
                 ),
                 PopupMenuItem(
                   value: 'Review',
                   child: ListTile(
                     leading:Image.asset(Pic.msg) ,
-                    trailing: TextWidget(txt: 'Review',fntsze: 14,),
+                    title: TextWidget(txt: 'Review',fntsze: 14,),
                   ),
                 ),
                 PopupMenuItem(
                   value: 'Unsave',
-                  child: ListTile(
-                    leading:Image.asset(Pic.pop,) ,
-                    trailing: TextWidget(txt: 'Unsave',fntsze: 14,),
+                  child: Row(
+              children:[
+                    Icon(Icons.add),
+                     TextWidget(txt: 'Unsave',fntsze: 14,
+              ),])
                   ),
-                ),
+                //),
               ];
             },
           ),

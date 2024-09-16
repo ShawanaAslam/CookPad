@@ -1,5 +1,7 @@
 //import 'package:cookpad/view/Starting_screens/splash_screen/splash_view.dart';
+import 'package:cookpad/src/view/Home_views/BottomNavigationBar/bottomBar_View.dart';
 import 'package:cookpad/src/view/Home_views/home_view/home_view.dart';
+import 'package:cookpad/src/view/Home_views/notificationAll_view/notificationAll_view.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_view.dart';
 import 'package:cookpad/src/view/Home_views/saved_recipe/savedrecipe_view.dart';
 import 'package:cookpad/src/view/Home_views/search_view/search_view.dart';
@@ -49,12 +51,14 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             home:
-            HomeView()
+            //NotificationAllView()
+            //BottomBar()
+           // HomeView()
             //WidgetOne()
-            //    RecipeIngridentView()
-            //SavedRecipeView()
-            // SearchView()
-            //SignUpView()
+               RecipeIngridentView()
+          //SavedRecipeView()
+            //SearchView()
+           // SignUpView()
             //LoginView()
             //SplashView()
             //const MyHomePage(title: 'Flutter Demo Home Page'),

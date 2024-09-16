@@ -106,6 +106,7 @@ class SavedContainer extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 10,
                             backgroundImage: AssetImage(Pic.icn,),
+
                           ),
                         )
                       ],

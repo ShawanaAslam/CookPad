@@ -18,7 +18,7 @@ class SelectedButton extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: Container(
-        margin: EdgeInsets.all(5),
+        margin: EdgeInsets.all(4),
         height: hght,
         width: wdth,
         decoration: BoxDecoration(

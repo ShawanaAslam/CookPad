@@ -22,4 +22,9 @@ class Pic{
   static String cabge='assets/images/cabge.png';
   static String top='assets/icons/top.png';
   static String child='assets/images/child.png';
+  static String frstbar='assets/icons/1stbar.png';
+  static String noti='assets/icons/noti.png';
+  static String profile='assets/icons/profile.png';
+  static String img='assets/images/imag.png';
+  static String msgg='assets/icons/msgg.png';
 }

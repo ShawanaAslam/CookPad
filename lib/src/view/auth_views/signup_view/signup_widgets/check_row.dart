@@ -34,7 +34,8 @@ class _CheckRowState extends State<CheckRow> {
                 children: [
                   Checkbox(value: isChecked,
 
-            // fillColor:,
+
+            fillColor: MaterialStateProperty.all(Colors.white),
                 checkColor: AppColors.orangeColor,
                       onChanged: ( value){
                     setState(() {
@@ -42,7 +43,7 @@ class _CheckRowState extends State<CheckRow> {
                     });
                       }),
                   Text('Accept terms & Condition',style: GoogleFonts.roboto(
-                      fontSize:11.sp,color: AppColors.orangeColor),),
+                      fontSize:13.sp,color: AppColors.orangeColor),),
                 ],
               ),
             ))
