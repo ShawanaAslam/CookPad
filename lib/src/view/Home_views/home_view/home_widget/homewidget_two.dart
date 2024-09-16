@@ -7,7 +7,11 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../constants/pictures.dart';
 
 class HomeWidgetTwo extends StatelessWidget {
-  const HomeWidgetTwo({super.key});
+  String txt;
+  String path;
+  String path1;
+   HomeWidgetTwo({super.key,
+   required this.txt,required this.path,required this.path1});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +31,7 @@ class HomeWidgetTwo extends StatelessWidget {
               height: 95.sp,
 
               width: 251.sp,
-              child: const Card(
+              child: Card(
                 shadowColor: Colors.black87,
                 color: Colors.white,
                 child: Padding(
@@ -78,11 +82,12 @@ class HomeWidgetTwo extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             radius: 13,
+                            backgroundImage: AssetImage(path1),
                           ),
                           SizedBox(
                             width: 10,
                           ),
-                          Text('data',style: TextStyle(color:AppColors.greyColor,fontSize: 11))
+                          Text(txt,style: TextStyle(color:AppColors.greyColor,fontSize: 11))
                         ],
                       ),
 
@@ -92,7 +97,7 @@ class HomeWidgetTwo extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(right: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -100,7 +105,7 @@ class HomeWidgetTwo extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30,
-
+backgroundImage: AssetImage(path),
                 ),
                 SizedBox(
                   height: 10,
@@ -113,8 +118,8 @@ class HomeWidgetTwo extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      //Image(image: AssetImage(Pic.timer)),
-                      //SizedBox(width: 10,),
+                      Image(image: AssetImage(Pic.timer)),
+                      SizedBox(width: 10,),
                       Text('20 mnt',style: TextStyle(color:AppColors.greyColor,fontSize: 11),),
 
                     ],

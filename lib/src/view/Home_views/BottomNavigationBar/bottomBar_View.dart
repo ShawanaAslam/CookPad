@@ -56,7 +56,9 @@ class _BottomBarState extends State<BottomBar> {
       bottomNavigationBar: AnimatedBottomNavigationBar(
         activeColor: AppColors.primaryColor,
         inactiveColor: AppColors.lightGreyColor,
-        icons: [
+        icons:[
+
+
           // icon:Image.asset(),
           //  ImageIcon( AssetImage(Pic.icn,)),
           //

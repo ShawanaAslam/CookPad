@@ -1,5 +1,6 @@
 import 'package:cookpad/src/common_widgets/selected_button.dart';
 import 'package:cookpad/src/common_widgets/text-widget.dart';
+import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_Widget/ingridentCircl_Row.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_Widget/ingridentIcon_Row.dart';
@@ -8,6 +9,7 @@ import 'package:cookpad/src/view/Home_views/saved_recipe/savedrecipe_widget/save
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'recipeIngrident_Widget/ingrdntFirst_Row.dart';
 class RecipeIngridentView extends StatefulWidget {
@@ -26,75 +28,144 @@ class _RecipeIngridentViewState extends State<RecipeIngridentView> {
         leading: Icon(Icons.arrow_back),
         actions: [
 
-          PopupMenuButton(
+       PopupMenuButton(
+         color: Colors.white,
             onSelected: (String value) {
               if (value == 'share') {
+                    Get.defaultDialog(
+                      title: 'Recipe Link',
+                      titleStyle: GoogleFonts.roboto(
+                        fontWeight:FontWeight.w600 ,fontSize: 20.sp
+                      ),
+                     // titlePadding: Padding(padding: ),
+                      content: Column(
+                        children: [
+                          Text('Copy recipe link and share your recipe link with friends and family.'),
+                          SizedBox(height: 10,),
+                          //Row(
+                            //children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: AppColors.cardclr,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    //border: Border
+                                  ),
+                                ),
+                              ),
+                          // InkWell(
+                          //   child: Container(
+                          //     width: 100,
+                          //     decoration: BoxDecoration(
+                          //       borderRadius: BorderRadius.circular(10),
+                          //       color: AppColors.primaryColor
+                          //     ),
+                          //     child: Text(''),
+                          //   ),
+                          // )
+                       // ],
+                     // ),
+                      ])
 
+                    );
               }
               if (value == 'Rate Recipe')
               {
+                Get.defaultDialog(
+                    title: 'Rate Recipe',
+                    titleStyle: GoogleFonts.roboto(
+                        fontWeight:FontWeight.w600 ,fontSize: 20.sp
+                    ),
+                    // titlePadding: Padding(padding: ),
+                    content: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.star_border,color: AppColors.orangeColor,),
+                        SizedBox(width: 5,),
+                        Icon(Icons.star_border,color: AppColors.orangeColor,),
+                        SizedBox(width: 5,),
+                        Icon(Icons.star_border,color: AppColors.orangeColor,),
+                        SizedBox(width: 5,),
+                        Icon(Icons.star_border,color: AppColors.orangeColor,),
+                        SizedBox(width: 5,),
+                        Icon(Icons.star_border,color: AppColors.orangeColor,),
 
+                      ],
+                    ),
+                  actions: [
+                    Container(
+                      height: 20,
+                      width: 61,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5.r),
+                        color: AppColors.cardclr
+                      ),
+                      child: Center(child: TextWidget(txt: 'Send',clr: Colors.white,fntsze: 8.sp,fntwt: FontWeight.w400,)),
+                    )
+                  ]
+
+                );
               }
               if (value == 'Review')
               {
 
               }
-              else if (value == 'Unsave') {
-            //     Get.defaultDialog(
-            //       title: 'Message',
-            //       content: Text('Do you want to Delete this Data?'),
-            //       actions: [
-            //         ElevatedButton(
-            //           onPressed: () {
-            //             // FirebaseFirestore.instance
-            //             //     .collection(userEmail)
-            //             //     .doc(data.docs[index].id)
-            //             //     .delete();
-            //             Get.back(); // Close the dialog after deletion
-            //           },
-            //           child: Text('Yes'),
-            //         ),
-            //         ElevatedButton(
-            //           onPressed: () {
-            //             Get.back();
-            //           },
-            //           child: Text('No'),
-            //         ),
-            //       ],
-            //     );
+              else if (value == 'Unsave')
+              {
+
               }
 
              },
             itemBuilder: (BuildContext context) {
               return [
+
                 PopupMenuItem(
                   value: 'share',
-                  child: ListTile(
-                    leading:  Image.asset(Pic.share),
-                    title:TextWidget(txt: 'Share',fntsze: 14,),
-                  ),
+                  child: Column(
+                      children:[
+                        Row(children: [
+                          Image.asset(Pic.share),
+                          SizedBox(width: 20,),
+                          TextWidget(txt: 'Share',fntsze: 14,
+                          ),])
+                      ]),
                 ),
                 PopupMenuItem(
                   value: 'Rate Recipe',
-                  child: ListTile(
-                    leading:Icon(Icons.star),
-                    title:  TextWidget(txt: 'Rate Recipe',fntsze: 14,),
-                  ),
+                  child: Column(
+                      children:[
+                        Row(children: [
+                          Icon(Icons.star),
+                          SizedBox(width: 16,),
+                          TextWidget(txt: 'Rate Recipe',fntsze: 14,
+                          ),])
+                      ]),
                 ),
                 PopupMenuItem(
                   value: 'Review',
-                  child: ListTile(
-                    leading:Image.asset(Pic.msg) ,
-                    title: TextWidget(txt: 'Review',fntsze: 14,),
-                  ),
+                  child: Column(
+                      children:[
+                        Row(children: [
+                          Image.asset(Pic.msg),
+                          SizedBox(width: 20,),
+                          TextWidget(txt: 'Review',fntsze: 14,
+                          ),])
+                      ]),
                 ),
                 PopupMenuItem(
                   value: 'Unsave',
-                  child: Row(
+                  child: Column(
               children:[
-                    Icon(Icons.add),
+                Row(children: [
+                Image.asset(Pic.pop),
+                  SizedBox(width: 20,),
+                  //  Icon(Icons.add),
                      TextWidget(txt: 'Unsave',fntsze: 14,
               ),])
+              ])
                   ),
                 //),
               ];

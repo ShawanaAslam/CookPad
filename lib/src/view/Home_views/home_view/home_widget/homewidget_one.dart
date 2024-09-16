@@ -35,7 +35,7 @@ class HomeWidgetOne extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 30.0),
+            padding:  EdgeInsets.only(top: 30.0),
             child: Container(
               height: 176,
               width: 150,
@@ -45,19 +45,17 @@ class HomeWidgetOne extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child:  Padding(
-                padding: const EdgeInsets.only(bottom: 10.0, top: 70),
+                padding:  EdgeInsets.only(bottom: 10.0, top: 70),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       children: [
-                        Text(txt),
-                        Text(txt1),
+                        TextWidget(txt:txt,fntsze:14.sp ,fntwt:FontWeight.w600 ,),
+                        //Text(txt1),
                       ],
                     ),
-                    // SizedBox(
-                    //   height: ,
-                    // ),
+
                     Padding(
                       padding:
                       const EdgeInsets.symmetric(horizontal: 15.0),
@@ -74,18 +72,19 @@ class HomeWidgetOne extends StatelessWidget {
                                 ),)
                               ),
                               SizedBox(height: 5,),
-                              Text('15 Min', style:TextStyle(
+                              Text(txt1, style:TextStyle(
                               fontWeight: FontWeight.w600,fontSize: 11))],
                           ),
                           CircleAvatar(
                             radius: 16,
                             backgroundColor: Colors.white,
                            child: CircleAvatar(
-                             radius: 13,
-
+                             radius: 10,
+                               backgroundColor: Colors.white,
+                               backgroundImage: AssetImage(Pic.icn,)
 
                            ),
-                            backgroundImage: AssetImage(Pic.pop),
+
                          // backgroundImage: AssetImage(),
                           )
 

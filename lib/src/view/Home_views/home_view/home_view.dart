@@ -29,7 +29,7 @@ class _HomeViewState extends State<HomeView> {
             children: [
              SmallContainerWidget( btm:0,hgt: 40.sp,wdth: 40.sp,
                txt: 'Hello Fola',txt1: "What are you cooking today?",path: Pic.child,),
-              SizedBox(height: 30),
+              SizedBox(height: 10),
               SearchRow(),
               SizedBox(height: 15,),
               Row(
@@ -70,15 +70,15 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ],
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 15,),
               SingleChildScrollView(
           scrollDirection: Axis.horizontal,
                 child: Row(children: [
-                  HomeWidgetOne(txt:'',txt1: '',path: Pic.rice,),
+                  HomeWidgetOne(txt:'Classic Greek \n        Salad',txt1: '15 Mins',path: Pic.rice,),
                   SizedBox(width: 10,),
-                  HomeWidgetOne(txt:'',txt1: '',path: Pic.bowl,),
+                  HomeWidgetOne(txt:'Crunchy Nut \n  Coleslaw',txt1: '10 Mins',path: Pic.bowl,),
                   SizedBox(width: 10,),
-                  HomeWidgetOne(txt:'',txt1: '',path: Pic.burgr,)
+                  HomeWidgetOne(txt:'Classic Greek \n        Salad',txt1: '30 Mins',path: Pic.burgr,)
                 ],),
               ),
               SizedBox(height: 10,),
@@ -93,8 +93,8 @@ class _HomeViewState extends State<HomeView> {
                 child: Row(
                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    HomeWidgetTwo(),
-                    HomeWidgetTwo(),
+                    HomeWidgetTwo(txt: 'By James Milner',path: Pic.burgr,path1: Pic.boy,),
+                    HomeWidgetTwo(txt: 'By Laura',path: Pic.nodles,path1: Pic.boy,),
                   ],
                 ),
               )
