@@ -27,4 +27,9 @@ class Pic{
   static String profile='assets/icons/profile.png';
   static String img='assets/images/imag.png';
   static String msgg='assets/icons/msgg.png';
+  static String grl='assets/images/grl.jpeg';
+  static String men='assets/images/men.jpeg';
+  static String man='assets/images/man.jpeg';
+  static String brown='assets/images/brown.jpeg';
+  static String lip='assets/images/lip.jpeg';
 }

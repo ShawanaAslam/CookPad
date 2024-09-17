@@ -14,6 +14,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../signup_view/signup_view.dart';
 import 'login_widgets/floating_row.dart';
 
 class LoginView extends StatefulWidget {
@@ -29,6 +30,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.scaffoldColor,
         body: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 70),
       child: SingleChildScrollView(
@@ -73,6 +75,8 @@ class _LoginViewState extends State<LoginView> {
               height: 20,
             ),
             MyButton(
+              width: double.infinity,
+                icn: Icons.arrow_forward_rounded,
                 txt: 'Sign in',
                 clr: AppColors.primaryColor,
                 ontap: () {
@@ -94,7 +98,9 @@ class _LoginViewState extends State<LoginView> {
             SizedBox(
               height: 30,
             ),
-            InkwellRow()
+            InkwellRow(txt: "Don't have an account?",txt1: 'Sign Up',
+ontap:(){ Navigator.push(context,CupertinoPageRoute(builder:(context)=>SignUpView()));} ,
+            )
           ],
         ),
       ),

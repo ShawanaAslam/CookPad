@@ -57,10 +57,10 @@ class MyApp extends StatelessWidget {
                 //WidgetOne()
                 // RecipeIngridentView()
                 //SavedRecipeView()
-                //SearchView()
+               // SearchView()
                 // SignUpView()
                 //LoginView()
-                SplashView()
+               // SplashView()
             //const MyHomePage(title: 'Flutter Demo Home Page'),
             );
       },

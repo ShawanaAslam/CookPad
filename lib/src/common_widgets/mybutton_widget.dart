@@ -5,7 +5,10 @@ class MyButton extends StatelessWidget {
   VoidCallback? ontap;
   String txt;
   Color clr;
-  MyButton({super.key, required this.txt, this.ontap, this.clr = Colors.white});
+  double width;
+  IconData? icn;
+  MyButton({super.key, required this.txt, this.ontap, this.clr = Colors.white,
+  required this.width,this.icn});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class MyButton extends StatelessWidget {
         onTap: ontap ?? null,
         child: Container(
           height: 50,
-          width: double.infinity,
+          width: width,
           decoration: BoxDecoration(
               color: clr, borderRadius: BorderRadius.circular(10)),
           child: Center(
@@ -21,15 +24,19 @@ class MyButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  txt,
-                  style: GoogleFonts.roboto(fontSize: 20, color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(left: 28),
+                  child: Text(
+                    txt,
+                    style: GoogleFonts.roboto(fontSize: 20, color: Colors.white),
+                  ),
                 ),
                 SizedBox(
                   width: 5,
                 ),
                 Icon(
-                  Icons.arrow_forward_rounded,
+                  icn??null,
+                  //Icons.arrow_forward_rounded,
                   size: 20,
                   color: Colors.white,
                 )

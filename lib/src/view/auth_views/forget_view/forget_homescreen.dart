@@ -33,7 +33,9 @@ class ForgetHome extends StatelessWidget {
                   // ontap: () {
                   //   Navigator.pushReplacement(context,CupertinoPageRoute(builder:(context)=>SigninScreen()));
                   // })
-              MyButton(txt: 'Login',clr: AppColors.primaryColor, ontap: (){
+              MyButton(
+                  width:double.infinity,
+                  txt: 'Login',clr: AppColors.primaryColor, ontap: (){
                 Get.to(()=>LoginView());
               })
             ],

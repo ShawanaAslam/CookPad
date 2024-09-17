@@ -143,13 +143,13 @@ class _SearchRowState extends State<SearchRow> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextWidget(txt: 'Filter Search'),
+                  TextWidget(txt: 'Filter Search',fntsze: 18,fntwt: FontWeight.w600,),
                 ],
               ),
               // Time Category
               _buildCategory(
                 "Time",
-                ["10 min", "20 min", "30 min", "40 min"],
+                ["All", "Newest", "Oldest", "Popularity"],
                 selectedTimeIndex,
                 (index) {
                   setState(() {
@@ -162,7 +162,9 @@ class _SearchRowState extends State<SearchRow> {
               // Rate Category
               _buildCategory(
                 "Rate",
-                ["1 Star", "2 Stars", "3 Stars", "4 Stars"],
+                ["5 Star", "4 Stars", "3 Stars", "2 Stars",
+                  ],
+
                 selectedRateIndex,
                 (index) {
                   setState(() {
@@ -185,10 +187,13 @@ class _SearchRowState extends State<SearchRow> {
                 },
               ),
               SizedBox(height: 20),
-              MyButton(
-                txt: 'Filter',
-                clr: AppColors.primaryColor,
-                ontap: () => Get.back(),
+              Center(
+                child: MyButton(
+                  width: 200,
+                  txt: 'Filter',
+                  clr: AppColors.primaryColor,
+                  ontap: () => Get.back(),
+                ),
               )
             ],
           ),

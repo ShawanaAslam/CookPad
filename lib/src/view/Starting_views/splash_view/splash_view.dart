@@ -26,7 +26,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 5),()  {
+    Future.delayed(Duration(seconds: 2),()  {
       Get.to(()=>LoginView());
     //  isUserlogin();
     });
@@ -95,7 +95,10 @@ class _SplashViewState extends State<SplashView> {
                  SizedBox(height: 10,),
                  TextWidget(clr: Colors.white,txt:'Simple way to find Tasty Recipe',fntsze: 16,fntwt: FontWeight.w400,),
                  SizedBox(height: 60,),
-                 MyButton(txt:'Start Cooking',clr: Colors.teal, ontap: (){}),
+                 MyButton(
+
+                     width:double.infinity,
+                     icn: Icons.arrow_forward_rounded,txt:'Start Cooking',clr: Colors.teal, ontap: (){}),
 
 
                ],

@@ -60,14 +60,17 @@ TextEditingController n1=TextEditingController();
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
            RowWidget(txt:'Enter Email For Forget Pasword' ),
-            SizedBox(height: 3,),
+            SizedBox(height: 5,),
             MyTextformfield(controller:n1 , hnttxt:'Enter Email For Forget Pasword'),
             SizedBox(height: 40,),
            // isloading? CircularProgressIndicator():
            // InkwellWidget(txt: 'Forget Pasword',clr:Colors.blue.shade100 , ontap:
             //forget
           //  )
-            MyButton(txt: 'Forget Pasword',clr: AppColors.primaryColor, ontap: (){
+            MyButton(
+                width:double.infinity,
+                icn: Icons.arrow_forward_rounded,
+                txt: 'Forget Pasword',clr: AppColors.primaryColor, ontap: (){
               Get.to(()=>ForgetHome());
             })
           ],

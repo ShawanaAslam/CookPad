@@ -89,6 +89,11 @@ flutter:
     - assets/icons/profile.png
     - assets/images/imag.png
     - assets/icons/msgg.png
+    - assets/images/men.jpeg
+    - assets/images/man.jpeg
+    - assets/images/grl.jpeg
+    - assets/images/brown.jpeg
+    - assets/images/lip.jpeg
 
     #- assets/icons/splashIcon.png
     #- assets/icons/fb.svg

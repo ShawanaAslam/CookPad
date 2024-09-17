@@ -17,6 +17,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../../common_widgets/Inkwell-row.dart';
+import '../login_view/login_view.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -30,9 +31,10 @@ class _SignUpViewState extends State<SignUpView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.scaffoldColor,
         body:
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 30, ),
           child:
           SingleChildScrollView(
             child: Column(
@@ -64,7 +66,9 @@ class _SignUpViewState extends State<SignUpView> {
                 SizedBox(height: 5,),
                 CheckRow(),
                 SizedBox(height: 20,),
-                MyButton(txt: 'Sign up', clr:AppColors.primaryColor,
+                MyButton(
+                    width:double.infinity,
+                    icn: Icons.arrow_forward_rounded,txt: 'Sign up', clr:AppColors.primaryColor,
                     ontap: ()
                     {
                     }),
@@ -73,7 +77,12 @@ class _SignUpViewState extends State<SignUpView> {
                 SizedBox(height: 10,),
                 FloatingRow(),
                 SizedBox(height: 15,),
-                InkwellRow()
+                InkwellRow(
+                  txt: 'Already a member?',txt1: 'Sign in',
+                  ontap: (){
+                    Navigator.push(context,CupertinoPageRoute(builder:(context)=>LoginView()));
+                  },
+                )
             
             
               ],

@@ -75,7 +75,7 @@ class _RecipeIngridentViewState extends State<RecipeIngridentView> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: AppColors.primaryColor),
-                              child: Text(''),
+                              child: Center(child: TextWidget(txt: 'Copy link',clr: Colors.white,)),
                             ),
                           )
                         ],
