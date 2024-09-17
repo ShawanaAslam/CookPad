@@ -1,10 +1,11 @@
-
-
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_view.dart';
 //import 'package:cookpad/src/view/Home_views/notification_view/notificationAll_view.dart';
 import 'package:cookpad/src/view/Home_views/saved_recipe/savedrecipe_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 import '../../../constants/colors.dart';
 import '../../../constants/pictures.dart';
@@ -23,12 +24,11 @@ class _BottomBarState extends State<BottomBar> {
   int _bottomNavIndex = 0;
 
   final List<Widget> _screens = [
-
     HomeView(),
     SavedRecipeView(),
     NotificationAllView(),
     ProfileView()
-   ];
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,10 +45,12 @@ class _BottomBarState extends State<BottomBar> {
           highlightElevation: 0.0,
           splashColor: Colors.transparent,
           onPressed: () {
+            Get.to(() => RecipeIngridentView());
             // Add your action for the floating action button
           },
           child: Icon(Icons.add, color: Colors.white),
-          backgroundColor: Colors.transparent, // Make the background color transparent
+          backgroundColor:
+              Colors.transparent, // Make the background color transparent
           elevation: 0, // Remove shadow
         ),
       ),
@@ -56,17 +58,17 @@ class _BottomBarState extends State<BottomBar> {
       bottomNavigationBar: AnimatedBottomNavigationBar(
         activeColor: AppColors.primaryColor,
         inactiveColor: AppColors.lightGreyColor,
-        icons:[
-
-
+        icons: [
           // icon:Image.asset(),
           //  ImageIcon( AssetImage(Pic.icn,)),
           //
           //   Icon(Icons.add,size: 30,color: Colors.white,),
           //   Image(image: AssetImage(Pic.noti,)),
           //   Image(image: AssetImage(Pic.profile)),
-          Icons.home_outlined,
-          Icons.save_alt_sharp,
+          FontAwesomeIcons.house,
+          //Icons.home_outlined,
+          FontAwesomeIcons.download,
+          //  Icons.save_alt_sharp,
           Icons.notifications_outlined,
           Icons.person_outline_outlined,
         ],

@@ -6,36 +6,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../common_widgets/row_widget.dart';
+
 class HomeWidgetOne extends StatelessWidget {
-   String txt;
-   String txt1;
+  String txt;
+  String txt1;
   String path;
- // String pathh;
-   HomeWidgetOne({super.key,
-     required this.path,
-     required this.txt,
-     required this.txt1,
-     //required this.pathh
-   });
+  // String pathh;
+  HomeWidgetOne({
+    super.key,
+    required this.path,
+    required this.txt,
+    required this.txt1,
+    //required this.pathh
+  });
 
   @override
   Widget build(BuildContext context) {
-    return
-      Center(
-      child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-      ///----------------1st widget=------------------------------------------
-
-      Container(
-      height: 231,
-      width: 150,
-      //  color: Colors.amber,
-      child: Stack(
-        alignment: Alignment.topCenter,
-        children: [
+    return Container(
+        height: 241,
+        width: 150,
+        // color: Colors.amber,
+        child: Stack(alignment: Alignment.topCenter, children: [
           Padding(
-            padding:  EdgeInsets.only(top: 30.0),
+            padding: EdgeInsets.only(top: 45.0),
             child: Container(
               height: 176,
               width: 150,
@@ -44,50 +37,53 @@ class HomeWidgetOne extends StatelessWidget {
                 color: AppColors.cardclr,
                 borderRadius: BorderRadius.circular(20),
               ),
-              child:  Padding(
-                padding:  EdgeInsets.only(bottom: 10.0, top: 70),
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 10.0, top: 70),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      children: [
-                        TextWidget(txt:txt,fntsze:14.sp ,fntwt:FontWeight.w600 ,),
-                        //Text(txt1),
-                      ],
+                    TextWidget(
+                      txt: txt,
+                      fntsze: 14.sp,
+                      fntwt: FontWeight.w600,
                     ),
-
                     Padding(
-                      padding:
-                      const EdgeInsets.symmetric(horizontal: 15.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: Row(
-                        mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(right: 10),
-                                child: Text('Time',style: TextStyle(
-                                  color: AppColors.greyColor,fontWeight: FontWeight.w400,fontSize: 11
-                                ),)
+                                  padding: EdgeInsets.only(right: 10),
+                                  child: Text(
+                                    'Time',
+                                    style: TextStyle(
+                                        color: AppColors.greyColor,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 11),
+                                  )),
+                              SizedBox(
+                                height: 5,
                               ),
-                              SizedBox(height: 5,),
-                              Text(txt1, style:TextStyle(
-                              fontWeight: FontWeight.w600,fontSize: 11))],
+                              Text(txt1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 11))
+                            ],
                           ),
                           CircleAvatar(
                             radius: 16,
                             backgroundColor: Colors.white,
-                           child: CircleAvatar(
-                             radius: 10,
-                               backgroundColor: Colors.white,
-                               backgroundImage: AssetImage(Pic.icn,)
+                            child: CircleAvatar(
+                                radius: 10,
+                                backgroundColor: Colors.white,
+                                backgroundImage: AssetImage(
+                                  Pic.icn,
+                                )),
 
-                           ),
-
-                         // backgroundImage: AssetImage(),
+                            // backgroundImage: AssetImage(),
                           )
-
                         ],
                       ),
                     )
@@ -101,9 +97,41 @@ class HomeWidgetOne extends StatelessWidget {
             radius: 45,
             backgroundImage: AssetImage(path),
           ),
-        ])
-    )
-          ]
-      )
-    );}}
-
+          Padding(
+            padding: const EdgeInsets.only(right: 15.0, top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Container(
+                      height: 22.sp,
+                      width: 46.sp,
+                      decoration: BoxDecoration(
+                          color: AppColors.lightOrangeColor,
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: AppColors.orangeColor,
+                            size: 14,
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Text(
+                            '4.0',
+                            style: GoogleFonts.roboto(fontSize: 8.sp),
+                          )
+                        ],
+                      )),
+                ),
+              ],
+            ),
+          ),
+        ]));
+  }
+}
