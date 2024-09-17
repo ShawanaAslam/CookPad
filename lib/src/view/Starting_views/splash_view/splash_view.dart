@@ -26,7 +26,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 2),()  {
+    Future.delayed(Duration(seconds: 6),()  {
       Get.to(()=>LoginView());
     //  isUserlogin();
     });

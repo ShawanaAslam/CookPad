@@ -1,6 +1,7 @@
 import 'package:cookpad/src/common_widgets/text-widget.dart';
 import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
+import 'package:cookpad/src/view/Home_views/home_view/review_View/review_View.dart';
 import 'package:cookpad/src/view/Home_views/profile_view/profile_widget/profileRow_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -138,8 +139,14 @@ class _ProfileViewState extends State<ProfileView> {
                       )
                     ]);
               }
-              if (value == 'Review') {
-              } else if (value == 'Unsave') {}
+              if (value == 'Review')
+              {
+                Get.to(()=>ReviewView());
+              }
+              else if (value == 'Unsave')
+              {
+
+              }
             },
             itemBuilder: (BuildContext context) {
               return [

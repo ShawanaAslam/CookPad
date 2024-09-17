@@ -35,7 +35,7 @@ class ForgetHome extends StatelessWidget {
                   // })
               MyButton(
                   width:double.infinity,
-                  txt: 'Login',clr: AppColors.primaryColor, ontap: (){
+                  txt: 'Okay',clr: AppColors.primaryColor, ontap: (){
                 Get.to(()=>LoginView());
               })
             ],

@@ -1,5 +1,6 @@
 
 
+import 'package:cookpad/src/common_widgets/Divider_widget.dart';
 import 'package:cookpad/src/common_widgets/mybutton_widget.dart';
 import 'package:cookpad/src/common_widgets/row_widget.dart';
 import 'package:cookpad/src/common_widgets/text-widget.dart';
@@ -73,7 +74,7 @@ class _SignUpViewState extends State<SignUpView> {
                     {
                     }),
                 SizedBox(height: 10,),
-                Center(child: TextWidget(txt: '--------- or Sign in With --------',fntsze: 11.sp,clr: Colors.grey,)),
+             DividerWidget(),
                 SizedBox(height: 10,),
                 FloatingRow(),
                 SizedBox(height: 15,),

@@ -52,30 +52,19 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             home:
-<<<<<<< Updated upstream
-                //NotificationAllView()
-                //BottomBar()
-                //HomeView()
-                //WidgetOne()
-                // RecipeIngridentView()
-                //SavedRecipeView()
-               // SearchView()
-                // SignUpView()
-                //LoginView()
-               // SplashView()
-=======
-            ReviewView()
+
+            //ReviewView()
             //NotificationAllView()
             //BottomBar()
             //HomeView()
             //WidgetOne()
-              // RecipeIngridentView()
+            //RecipeIngridentView()
           //SavedRecipeView()
             //SearchView()
            // SignUpView()
             //LoginView()
-            //SplashView()
->>>>>>> Stashed changes
+            SplashView()
+
             //const MyHomePage(title: 'Flutter Demo Home Page'),
             );
       },

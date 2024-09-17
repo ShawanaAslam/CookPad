@@ -1,3 +1,4 @@
+import 'package:cookpad/src/common_widgets/Divider_widget.dart';
 import 'package:cookpad/src/common_widgets/Inkwell-row.dart';
 import 'package:cookpad/src/common_widgets/mybutton_widget.dart';
 import 'package:cookpad/src/common_widgets/row_widget.dart';
@@ -85,12 +86,8 @@ class _LoginViewState extends State<LoginView> {
             SizedBox(
               height: 10,
             ),
-            Center(
-                child: TextWidget(
-              txt: '--------- or Sign in With --------',
-              fntsze: 11.sp,
-              clr: Colors.grey,
-            )),
+
+         DividerWidget(),
             SizedBox(
               height: 15,
             ),
