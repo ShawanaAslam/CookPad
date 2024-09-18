@@ -4,7 +4,8 @@ import 'package:cookpad/src/constants/pictures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class IngridentIconRow extends StatelessWidget {
-  const IngridentIconRow({super.key});
+  String ing;
+   IngridentIconRow({super.key, required this.ing});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class IngridentIconRow extends StatelessWidget {
       SizedBox(width: 5,),
       RowWidget(txt: '1 serve',clr: AppColors.greyColor,fntsze: 11.sp,fntwt: FontWeight.w400,),
       SizedBox(width: 150,),
-      RowWidget(txt: '10 items',clr: AppColors.greyColor,fntsze: 11.sp,fntwt: FontWeight.w400),
+      RowWidget(txt: '10 $ing',clr: AppColors.greyColor,fntsze: 11.sp,fntwt: FontWeight.w400),
 
     ],);
   }

@@ -15,7 +15,7 @@ class NotificationAllView extends StatefulWidget {
 
 class _NotificationAllViewState extends State<NotificationAllView> {
   
-  int check=0;
+  int check=1;
 
   @override
   Widget build(BuildContext context) {

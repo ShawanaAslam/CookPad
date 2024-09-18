@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
 //<<<<<<< HEAD
-            home:SplashView()
+           // home:SplashView()
 // <<<<<<< Updated upstream
 //                 //NotificationAllView()
 //                 //BottomBar()

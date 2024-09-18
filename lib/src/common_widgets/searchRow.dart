@@ -56,6 +56,7 @@
 ///----------
 import 'package:cookpad/src/common_widgets/mybutton_widget.dart';
 import 'package:cookpad/src/common_widgets/text-widget.dart';
+import 'package:cookpad/src/view/Home_views/search_view/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -87,6 +88,9 @@ class _SearchRowState extends State<SearchRow> {
             height: 40.h,
             width: 255.w,
             child: TextFormField(
+              onTap: (){
+                Get.to(()=>SearchView());
+              },
               // controller: searchController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
@@ -160,19 +164,25 @@ class _SearchRowState extends State<SearchRow> {
               ),
               SizedBox(height: 20),
               // Rate Category
-              _buildCategory(
-                "Rate",
-                ["5 Star", "4 Stars", "3 Stars", "2 Stars",
-                  ],
-
-                selectedRateIndex,
-                (index) {
-                  setState(() {
-                    selectedRateIndex = index;
-                  });
-                  //  Navigator.pop(context); // Close bottom sheet after selection
-                },
-              ),
+              // _buildCategory(
+              //   "Rate",
+              //   ["5 Star", "4 Stars", "3 Stars", "2 Stars",
+              //     ],
+              //
+              //   selectedRateIndex,
+              //   (index) {
+              //     setState(() {
+              //       selectedRateIndex = index;
+              //     });
+              //     //  Navigator.pop(context); // Close bottom sheet after selection
+              //   },
+              // ),
+              _buildCategoryStars('Rate', ["5", "4", "3", "2","1"], selectedRateIndex,                 (index) {
+                setState(() {
+                  selectedRateIndex = index;
+                });
+                //  Navigator.pop(context); // Close bottom sheet after selection
+              },),
               SizedBox(height: 20),
               // Category .Category
               _buildCategory(
@@ -237,6 +247,54 @@ class _SearchRowState extends State<SearchRow> {
                       fontSize: 14.sp,
                     ),
                   ),
+                ),
+              ),
+            );
+          }),
+        ),
+      ],
+    );
+  }
+
+
+  Widget _buildCategoryStars(String title, List<String> options, int? selectedIndex,
+      Function(int) onTap) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style:
+          GoogleFonts.roboto(fontSize: 16.sp, fontWeight: FontWeight.bold),
+        ),
+        SizedBox(height: 10.h),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: List.generate(options.length, (index) {
+            bool isSelected = selectedIndex == index;
+            return GestureDetector(
+              onTap: () => onTap(index),
+              child: Container(
+                height: 40.h,
+                width: 60.w,
+                decoration: BoxDecoration(
+                  color:
+                  isSelected ? AppColors.primaryColor : Colors.transparent,
+                  border: Border.all(color: AppColors.primaryColor),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      options[index],
+                      style: GoogleFonts.roboto(
+                        color: isSelected ? Colors.white : AppColors.primaryColor,
+                        fontSize: 14.sp,
+                      ),
+                    ),
+                    Icon(Icons.star,color: isSelected ? Colors.white : AppColors.primaryColor,)
+                  ],
                 ),
               ),
             );
