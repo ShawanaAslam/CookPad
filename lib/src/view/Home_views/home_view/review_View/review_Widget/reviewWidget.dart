@@ -11,10 +11,12 @@ class ReviewWidget extends StatelessWidget {
   String txt2;
   String txt3;
   String txt4;
+  String path;
 
    ReviewWidget({super.key,required this.txt,
     required this.txt1,required this.txt2,
-     required this.txt3,required this.txt4});
+     required this.txt3,required this.txt4,
+   required this.path});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class ReviewWidget extends StatelessWidget {
       child: Column(children: [
         Row(children: [
           CircleAvatar(
-
+backgroundImage: AssetImage(path),
           ),
           Column(children: [
            Padding(

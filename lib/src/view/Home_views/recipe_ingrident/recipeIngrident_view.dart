@@ -11,6 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../home_view/review_View/review_View.dart';
 import 'recipeIngrident_Widget/ingrdntFirst_Row.dart';
 
 class RecipeIngridentView extends StatefulWidget {
@@ -147,6 +148,7 @@ class _RecipeIngridentViewState extends State<RecipeIngridentView> {
                     ]);
               }
               if (value == 'Review') {
+                Get.to(()=>ReviewView());
               } else if (value == 'Unsave') {}
             },
             itemBuilder: (BuildContext context) {

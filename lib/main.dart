@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
+//<<<<<<< HEAD
             home:SplashView()
 // <<<<<<< Updated upstream
 //                 //NotificationAllView()
@@ -76,6 +77,22 @@ class MyApp extends StatelessWidget {
 //             //LoginView()
 //             //SplashView()
 // >>>>>>> Stashed changes
+//=======
+            home:
+
+            //ReviewView()
+            //NotificationAllView()
+            //BottomBar()
+            //HomeView()
+            //WidgetOne()
+            //RecipeIngridentView()
+          //SavedRecipeView()
+            //SearchView()
+           // SignUpView()
+            //LoginView()
+            SplashView()
+
+//>>>>>>> e95ec45fc9c7d48808f0b08430c5177b5f4e05fe
             //const MyHomePage(title: 'Flutter Demo Home Page'),
             );
       },
