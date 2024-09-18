@@ -33,70 +33,65 @@ class HomeWidgetOne extends StatelessWidget {
         child: Stack(alignment: Alignment.topCenter, children: [
           Padding(
             padding: EdgeInsets.only(top: 45.0),
-            child: InkWell(
-              onTap: (){
-                Get.to(()=>SearchView());
-              },
-              child: Container(
-                height: 176,
-                width: 150,
-                // double.infinity,
-                decoration: BoxDecoration(
-                  color: AppColors.cardclr,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 10.0, top: 70),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextWidget(
-                        txt: txt,
-                        fntsze: 14.sp,
-                        fntwt: FontWeight.w600,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                Padding(
-                                    padding: EdgeInsets.only(right: 10),
-                                    child: Text(
-                                      'Time',
-                                      style: TextStyle(
-                                          color: AppColors.greyColor,
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 11),
-                                    )),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(txt1,
+            child: Container(
+              height: 176,
+              width: 150,
+              // double.infinity,
+              decoration: BoxDecoration(
+                color: AppColors.cardclr,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 10.0, top: 70),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextWidget(
+                      txt: txt,
+                      fntsze: 14.sp,
+                      fntwt: FontWeight.w600,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(right: 10),
+                                  child: Text(
+                                    'Time',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 11))
-                              ],
-                            ),
-                            CircleAvatar(
-                              radius: 16,
-                              backgroundColor: Colors.white,
-                              child: CircleAvatar(
-                                  radius: 10,
-                                  backgroundColor: Colors.white,
-                                  backgroundImage: AssetImage(
-                                    Pic.icn,
+                                        color: AppColors.greyColor,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 11),
                                   )),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(txt1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 11))
+                            ],
+                          ),
+                          CircleAvatar(
+                            radius: 16,
+                            backgroundColor: Colors.white,
+                            child: CircleAvatar(
+                                radius: 10,
+                                backgroundColor: Colors.white,
+                                backgroundImage: AssetImage(
+                                  Pic.icn,
+                                )),
 
-                              // backgroundImage: AssetImage(),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                            // backgroundImage: AssetImage(),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),

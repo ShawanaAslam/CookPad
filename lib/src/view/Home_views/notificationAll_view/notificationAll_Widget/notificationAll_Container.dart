@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationAllContainer extends StatelessWidget {
-  const NotificationAllContainer({super.key});
+   String txt;
+  NotificationAllContainer({super.key, required this.txt});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class NotificationAllContainer extends StatelessWidget {
                      Column(children: [
                        Padding(
                          padding: const EdgeInsets.only(right: 90),
-                         child: TextWidget(txt: "New Recipe Alert!",fntwt: FontWeight.w600,fntsze: 14.sp,),
+                         child: TextWidget(txt: txt,fntwt: FontWeight.w600,fntsze: 14.sp,),
                        ),
                        SizedBox(height: 5,),
                        TextWidget(txt: 'Lorem Ipsum tempor incididunt ut labore \net dolore,in voluptate velit esse cillum',clr:AppColors.greyColor,fntwt: FontWeight.w400,fntsze: 11.sp,),

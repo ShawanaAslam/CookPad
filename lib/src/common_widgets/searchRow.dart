@@ -105,11 +105,12 @@ class _SearchRowState extends State<SearchRow> {
                   fontSize: 12.sp,
                   color: Colors.grey,
                 ),
-                prefixIcon: Icon(
-                  Icons.search_rounded,
-                  color: Colors.grey,
-                  size: 20,
-                ),
+                prefixIcon: ImageIcon(AssetImage(Pic.srch))
+                // prefixIcon: Icon(
+                //   Icons.search_rounded,
+                //   color: Colors.grey,
+                //   size: 20,
+                // ),
               ),
             ),
           ),

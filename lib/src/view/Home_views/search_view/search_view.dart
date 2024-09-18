@@ -6,6 +6,7 @@ import 'package:cookpad/src/constants/pictures.dart';
 import 'package:cookpad/src/common_widgets/searchRow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../common_widgets/row_widget.dart';
@@ -23,7 +24,11 @@ class _SearchViewState extends State<SearchView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
+        // leading: IconButton(
+        //     (){},child: Icon(Icons.arrow_back)),
         title: TextWidget(txt: 'Search recipes',fntsze: 18.sp,),
         centerTitle: true,
       ),

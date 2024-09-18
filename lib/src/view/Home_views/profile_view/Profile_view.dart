@@ -1,7 +1,7 @@
 import 'package:cookpad/src/common_widgets/text-widget.dart';
 import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
-import 'package:cookpad/src/view/Home_views/home_view/review_View/review_View.dart';
+//import 'package:cookpad/src/view/Home_views/home_view/review_View/review_View.dart';
 import 'package:cookpad/src/view/Home_views/profile_view/profile_widget/profileRow_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../common_widgets/selected_button.dart';
+import '../review_View/review_View.dart';
 import '../saved_recipe/savedrecipe_widget/saved_container.dart';
 
 class ProfileView extends StatefulWidget {
@@ -19,7 +20,7 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> {
-  int check=0;
+  int check=1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
