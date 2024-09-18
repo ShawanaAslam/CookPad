@@ -2,6 +2,7 @@ import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/view/Home_views/notificationAll_view/notificationAll_Widget/allButton_widget.dart';
 import 'package:cookpad/src/view/Home_views/notificationAll_view/notificationAll_Widget/notificationAll_Container.dart';
 import 'package:cookpad/src/view/Home_views/notificationAll_view/notificationAll_Widget/readButton_Widget.dart';
+import 'package:cookpad/src/view/Home_views/notificationAll_view/notificationAll_Widget/unreadButton_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -59,7 +60,8 @@ class _NotificationAllViewState extends State<NotificationAllView> {
                     ),
 
                   SizedBox(height: 10,),
-               // check==1?AllButtonWidget():ReadButtonWidget(),
+                check==1?AllButtonWidget():check==2?ReadButtonWidget():UnReadButtonWidget(),
+
 
 
                   ]),

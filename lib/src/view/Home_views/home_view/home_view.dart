@@ -17,7 +17,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  int check=0;
+  int check=1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
