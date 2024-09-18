@@ -51,31 +51,31 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home:
-<<<<<<< Updated upstream
-                //NotificationAllView()
-                //BottomBar()
-                //HomeView()
-                //WidgetOne()
-                // RecipeIngridentView()
-                //SavedRecipeView()
-               // SearchView()
-                // SignUpView()
-                //LoginView()
-               // SplashView()
-=======
-            ReviewView()
-            //NotificationAllView()
-            //BottomBar()
-            //HomeView()
-            //WidgetOne()
-              // RecipeIngridentView()
-          //SavedRecipeView()
-            //SearchView()
-           // SignUpView()
-            //LoginView()
-            //SplashView()
->>>>>>> Stashed changes
+            home:SplashView()
+// <<<<<<< Updated upstream
+//                 //NotificationAllView()
+//                 //BottomBar()
+//                 //HomeView()
+//                 //WidgetOne()
+//                 // RecipeIngridentView()
+//                 //SavedRecipeView()
+//                // SearchView()
+//                 // SignUpView()
+//                 //LoginView()
+//                // SplashView()
+// =======
+//             ReviewView()
+//             //NotificationAllView()
+//             //BottomBar()
+//             //HomeView()
+//             //WidgetOne()
+//               // RecipeIngridentView()
+//           //SavedRecipeView()
+//             //SearchView()
+//            // SignUpView()
+//             //LoginView()
+//             //SplashView()
+// >>>>>>> Stashed changes
             //const MyHomePage(title: 'Flutter Demo Home Page'),
             );
       },
