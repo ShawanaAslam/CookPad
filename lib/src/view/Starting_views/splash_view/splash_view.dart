@@ -26,10 +26,10 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 6),()  {
-      Get.to(()=>LoginView());
-    //  isUserlogin();
-    });
+    // Future.delayed(Duration(seconds: 6),()  {
+    //   Get.to(()=>LoginView());
+    // //  isUserlogin();
+    // });
   }
   // isUserlogin()
   // {
@@ -98,7 +98,10 @@ class _SplashViewState extends State<SplashView> {
                  MyButton(
 
                      width:double.infinity,
-                     icn: Icons.arrow_forward_rounded,txt:'Start Cooking',clr: Colors.teal, ontap: (){}),
+                     icn: Icons.arrow_forward_rounded,txt:'Start Cooking',clr: Colors.teal,
+                     ontap: (){
+                       Get.to(()=>LoginView());
+                     }),
 
 
                ],

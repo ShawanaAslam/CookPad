@@ -94,6 +94,7 @@ flutter:
     - assets/images/grl.jpeg
     - assets/images/brown.jpeg
     - assets/images/lip.jpeg
+    - assets/icons/srch.png
 
     #- assets/icons/splashIcon.png
     #- assets/icons/fb.svg

@@ -4,6 +4,7 @@ import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_Widget/ingridentCircl_Row.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_Widget/ingridentIcon_Row.dart';
+import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_Widget/ingrident_buttonWidget.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_Widget/ingrident_card.dart';
 import 'package:cookpad/src/view/Home_views/saved_recipe/savedrecipe_widget/saved_container.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../home_view/review_View/review_View.dart';
+//import '../home_view/review_View/review_View.dart';
+import '../review_View/review_View.dart';
 import 'recipeIngrident_Widget/ingrdntFirst_Row.dart';
+import 'recipeIngrident_Widget/procedure_buttonWidget.dart';
 
 class RecipeIngridentView extends StatefulWidget {
   const RecipeIngridentView({super.key});
@@ -283,108 +286,8 @@ class _RecipeIngridentViewState extends State<RecipeIngridentView> {
   }
 }
 
-class IngredientContainer extends StatelessWidget {
-  const IngredientContainer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  Container(
-      child:Column(children:[
-        IngridentIconRow(ing: 'items',),
-        SizedBox(
-          height: 10,
-        ),
-        IngridentCard(
-          txt: 'Tomatos',
-          txt2: '500g',
-          path: Pic.tomato,
-          wdt: 120,
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        IngridentCard(
-          txt: 'Cabbage',
-          txt2: '300g',
-          path: Pic.cabge,
-          wdt: 120,
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        IngridentCard(
-          txt: 'Taco',
-          txt2: '300g',
-          path: Pic.taco,
-          wdt: 150,
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        IngridentCard(
-          txt: 'Slice Bread',
-          txt2: '300g',
-          path: Pic.slice,
-          wdt: 105,
-        ),
-      ])
-      ,              );
-  }
-}
 
 
 
-class ProedureContainer extends StatelessWidget {
-  const ProedureContainer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  Container(
-      child:Column(children:[
-        IngridentIconRow(ing: 'Steps',),
-        SizedBox(
-          height: 10,
-        ),
-       Card(
-         color: AppColors.greyColor,
-         child: Column(children: [
-           Text('data'),
-           Text('data'),
-         ],),
-       ),
-        SizedBox(
-          height: 5,
-        ),
-        Card(
-          color: AppColors.greyColor,
-          child: Column(children: [
-            Text('data'),
-            Text('data'),
-          ],),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Card(
-          color: AppColors.greyColor,
-          child: Column(children: [
-            Text('data'),
-            Text('data'),
-          ],),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Card(
-          color: AppColors.greyColor,
-          child: Column(children: [
-            Text('data'),
-            Text('data'),
-          ],),
-        ),
-      ])
-      ,              );
-  }
-}
 
 

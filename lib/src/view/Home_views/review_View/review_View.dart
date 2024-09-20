@@ -1,12 +1,15 @@
 import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
-import 'package:cookpad/src/view/Home_views/home_view/review_View/review_Widget/reviewWidget.dart';
+import 'package:cookpad/src/view/Home_views/review_View/review_Widget/reviewWidget.dart';
+//import 'package:cookpad/src/view/Home_views/home_view/review_View/review_Widget/reviewWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../common_widgets/text-widget.dart';
-import '../../recipe_ingrident/recipeIngrident_Widget/ingrdntFirst_Row.dart';
+import '../../../common_widgets/text-widget.dart';
+
+//import '../../../../common_widgets/text-widget.dart';
+//import '../../recipe_ingrident/recipeIngrident_Widget/ingrdntFirst_Row.dart';
 
 class ReviewView extends StatefulWidget {
   const ReviewView({super.key});

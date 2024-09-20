@@ -32,4 +32,5 @@ class Pic{
   static String man='assets/images/man.jpeg';
   static String brown='assets/images/brown.jpeg';
   static String lip='assets/images/lip.jpeg';
+  static String srch='assets/icons/srch.png';
 }

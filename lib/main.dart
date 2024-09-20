@@ -1,7 +1,7 @@
 //import 'package:cookpad/view/Starting_screens/splash_screen/splash_view.dart';
 import 'package:cookpad/src/view/Home_views/BottomNavigationBar/bottomBar_View.dart';
 import 'package:cookpad/src/view/Home_views/home_view/home_view.dart';
-import 'package:cookpad/src/view/Home_views/home_view/review_View/review_View.dart';
+
 import 'package:cookpad/src/view/Home_views/notificationAll_view/notificationAll_view.dart';
 import 'package:cookpad/src/view/Home_views/recipe_ingrident/recipeIngrident_view.dart';
 import 'package:cookpad/src/view/Home_views/saved_recipe/savedrecipe_view.dart';
@@ -51,48 +51,20 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-//<<<<<<< HEAD
-           // home:SplashView()
-// <<<<<<< Updated upstream
-//                 //NotificationAllView()
-//                 //BottomBar()
-//                 //HomeView()
-//                 //WidgetOne()
-//                 // RecipeIngridentView()
-//                 //SavedRecipeView()
-//                // SearchView()
-//                 // SignUpView()
-//                 //LoginView()
-//                // SplashView()
-// =======
-//             ReviewView()
-//             //NotificationAllView()
-//             //BottomBar()
-//             //HomeView()
-//             //WidgetOne()
-//               // RecipeIngridentView()
-//           //SavedRecipeView()
-//             //SearchView()
-//            // SignUpView()
-//             //LoginView()
-//             //SplashView()
-// >>>>>>> Stashed changes
-//=======
-            home:
 
+            home:
             //ReviewView()
             //NotificationAllView()
             //BottomBar()
             //HomeView()
             //WidgetOne()
-            //RecipeIngridentView()
+           // RecipeIngridentView()
           //SavedRecipeView()
             //SearchView()
            // SignUpView()
             //LoginView()
             SplashView()
 
-//>>>>>>> e95ec45fc9c7d48808f0b08430c5177b5f4e05fe
             //const MyHomePage(title: 'Flutter Demo Home Page'),
             );
       },
