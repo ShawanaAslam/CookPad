@@ -355,12 +355,7 @@ class SearchRow extends StatelessWidget {
                   fontSize: 12.sp,
                   color: Colors.grey,
                 ),
-                prefixIcon: ImageIcon(AssetImage(Pic.srch))
-                // prefixIcon: Icon(
-                //   Icons.search_rounded,
-                //   color: Colors.grey,
-                //   size: 20,
-                // ),
+                prefixIcon: ImageIcon(AssetImage(Pic.srch)),
               ),
             ),
           ),
@@ -384,132 +379,6 @@ class SearchRow extends StatelessWidget {
     );
   }
 
-  // Open the bottom sheet using GetX
-  Widget _buildCategory(
-      BuildContext context,
-      String title,
-      List<String> options,
-      int selectedIndex,
-      Function(int) onTap,
-      RxInt selectedValue) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: GoogleFonts.roboto(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 10.h),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: List.generate(options.length, (index) {
-            return GestureDetector(
-              onTap: () {
-                onTap(index);
-              },
-              child: Obx(() {
-                bool isSelected = selectedValue.value ==
-                    index; // Correctly use the selectedValue for each filter type
-                return Container(
-                  height: 40.h,
-                  width: 80.w,
-                  decoration: BoxDecoration(
-                    color: isSelected
-                        ? AppColors.primaryColor
-                        : Colors.transparent,
-                    border: Border.all(color: AppColors.primaryColor),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Text(
-                      options[index],
-                      style: GoogleFonts.roboto(
-                        color:
-                            isSelected ? Colors.white : AppColors.primaryColor,
-                        fontSize: 14.sp,
-                      ),
-                    ),
-                  ),
-                );
-              }),
-            );
-          }),
-        ),
-      ],
-    );
-  }
-
-  // Use for the stars category (rate)
-  Widget _buildCategoryStars(
-      BuildContext context,
-      String title,
-      List<String> options,
-      int selectedIndex,
-      Function(int) onTap,
-      RxInt selectedValue) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: GoogleFonts.roboto(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 10.h),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: List.generate(options.length, (index) {
-            return GestureDetector(
-              onTap: () {
-                onTap(index);
-              },
-              child: Obx(() {
-                bool isSelected = selectedValue.value ==
-                    index; // Correctly use selectedValue for the stars
-                return Container(
-                  height: 40.h,
-                  width: 60.w,
-                  decoration: BoxDecoration(
-                    color: isSelected
-                        ? AppColors.primaryColor
-                        : Colors.transparent,
-                    border: Border.all(color: AppColors.primaryColor),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        options[index],
-                        style: GoogleFonts.roboto(
-                          color: isSelected
-                              ? Colors.white
-                              : AppColors.primaryColor,
-                          fontSize: 14.sp,
-                        ),
-                      ),
-                      Icon(
-                        Icons.star,
-                        color:
-                            isSelected ? Colors.white : AppColors.primaryColor,
-                      ),
-                    ],
-                  ),
-                );
-              }),
-            );
-          }),
-        ),
-      ],
-    );
-  }
-
-  // Open bottom sheet function
   void _openFilterBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -530,44 +399,13 @@ class SearchRow extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
-              // Time Filter
-              _buildCategory(
-                context,
-                "Time",
-                ["All", "Newest", "Oldest", "Popularity"],
-                filterController.selectedTime.value,
-                (index) {
-                  filterController.updateTime(index);
-                },
-                filterController.selectedTime, // Passing the correct observable
-              ),
-              SizedBox(height: 20),
-              // Rate Filter
-              _buildCategoryStars(
-                context,
-                'Rate',
-                ["5", "4", "3", "2", "1"],
-                filterController.selectedRate.value,
-                (index) {
-                  filterController.updateRate(index);
-                },
-                filterController.selectedRate, // Passing the correct observable
-              ),
-              SizedBox(height: 20),
-              // Category Filter
-              _buildCategory(
-                context,
-                "Category",
-                ["Vegan", "Vegetarian", "Non-Veg", "Keto"],
-                filterController.selectedCategory.value,
-                (index) {
-                  filterController.updateCategory(index);
-                },
-                filterController
-                    .selectedCategory, // Passing the correct observable
-              ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
+              TimeFilter(),
+              SizedBox(height: 10),
+              RateFilter(),
+              SizedBox(height: 10),
+              CategoryFilter(),
+              SizedBox(height: 10),
               Center(
                 child: MyButton(
                   width: 200,
@@ -584,61 +422,186 @@ class SearchRow extends StatelessWidget {
       },
     );
   }
+}
 
-  // Same for stars category
-  // Widget _buildCategoryStars(BuildContext context, String title, List<String> options, int selectedIndex, Function(int) onTap) {
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       Text(
-  //         title,
-  //         style: GoogleFonts.roboto(
-  //           fontSize: 16.sp,
-  //           fontWeight: FontWeight.bold,
-  //         ),
-  //       ),
-  //       SizedBox(height: 10.h),
-  //       Row(
-  //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  //         children: List.generate(options.length, (index) {
-  //           return GestureDetector(
-  //             onTap: () {
-  //               onTap(index);
-  //             },
-  //             child: Obx(() {
-  //               bool isSelected = filterController.selectedRate.value == index;
-  //               return Container(
-  //                 height: 40.h,
-  //                 width: 60.w,
-  //                 decoration: BoxDecoration(
-  //                   color: isSelected ? AppColors.primaryColor : Colors.transparent,
-  //                   border: Border.all(color: AppColors.primaryColor),
-  //                   borderRadius: BorderRadius.circular(10),
-  //                 ),
-  //                 child: Row(
-  //                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  //                   children: [
-  //                     Text(
-  //                       options[index],
-  //                       style: GoogleFonts.roboto(
-  //                         color: isSelected ? Colors.white : AppColors.primaryColor,
-  //                         fontSize: 14.sp,
-  //                       ),
-  //                     ),
-  //                     Icon(
-  //                       Icons.star,
-  //                       color: isSelected ? Colors.white : AppColors.primaryColor,
-  //                     ),
-  //                   ],
-  //                 ),
-  //               );
-  //             }),
-  //           );
-  //         }),
-  //       ),
-  //     ],
-  //   );
-  // }
+class TimeFilter extends StatelessWidget {
+  final FilterController filterController = Get.find();
+
+  @override
+  Widget build(BuildContext context) {
+    return _buildFilter(
+      context,
+      "Time",
+      ["All", "Newest", "Oldest", "Popularity"],
+      filterController.selectedTime,
+      (index) => filterController.updateTime(index),
+    );
+  }
+}
+
+class RateFilter extends StatelessWidget {
+  final FilterController filterController = Get.find();
+
+  @override
+  Widget build(BuildContext context) {
+    return _buildStarsFilter(
+      context,
+      "Rate",
+      ["1", "2", "3", "4", "5"],
+      filterController.selectedRate,
+      (index) => filterController.updateRate(index),
+    );
+  }
+}
+
+class CategoryFilter extends StatelessWidget {
+  final FilterController filterController = Get.find();
+
+  @override
+  Widget build(BuildContext context) {
+    return _buildFilter(
+      context,
+      "Category",
+      [
+        "All",
+        "Cereal",
+        "Vegetables",
+        "Dinner",
+        "Chinese",
+        "Local Dish",
+        "Fruit",
+        "BreakFast",
+        "Spanish",
+        "Chinese",
+        "Lunch"
+      ],
+      filterController.selectedCategory,
+      (index) => filterController.updateCategory(index),
+    );
+  }
+}
+
+Widget _buildFilter(BuildContext context, String title, List<String> options,
+    RxInt selectedValue, Function(int) onTap) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        title,
+        style: GoogleFonts.roboto(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      SizedBox(height: 5.h),
+      Wrap(
+        spacing: 8, // Horizontal spacing between items
+        runSpacing: 8, // Vertical spacing between rows
+        children: List.generate(options.length, (index) {
+          return GestureDetector(
+            onTap: () {
+              onTap(index); // Trigger the callback on tap
+            },
+            child: Obx(() {
+              bool isSelected = selectedValue.value ==
+                  index; // Check if this option is selected
+              return Container(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                decoration: BoxDecoration(
+                  color:
+                      isSelected ? AppColors.primaryColor : Colors.transparent,
+                  border: Border.all(color: AppColors.primaryColor),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                constraints: BoxConstraints(
+                  minWidth: 60, // Minimum width, adjusts based on content
+                  maxWidth: 150, // Maximum width to prevent overflow
+                ),
+                child: Text(
+                  options[index], // Display option text
+                  style: GoogleFonts.roboto(
+                    color: isSelected ? Colors.white : AppColors.primaryColor,
+                    fontSize: 14.sp,
+                  ),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis, // Truncate if text overflows
+                  softWrap: true, // Allow text to wrap to the next line
+                ),
+              );
+            }),
+          );
+        }),
+      )
+    ],
+  );
+}
+
+Widget _buildStarsFilter(BuildContext context, String title,
+    List<String> options, RxInt selectedValue, Function(int) onTap) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        title,
+        style: GoogleFonts.roboto(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      SizedBox(height: 10.h),
+      LayoutBuilder(
+        builder: (context, constraints) {
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: List.generate(options.length, (index) {
+                return GestureDetector(
+                  onTap: () {
+                    onTap(index);
+                  },
+                  child: Obx(() {
+                    bool isSelected = selectedValue.value == index;
+                    return Container(
+                      margin: EdgeInsets.all(2),
+                      height: 40.h,
+                      width: 60.w,
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? AppColors.primaryColor
+                            : Colors.transparent,
+                        border: Border.all(color: AppColors.primaryColor),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            options[index],
+                            style: GoogleFonts.roboto(
+                              color: isSelected
+                                  ? Colors.white
+                                  : AppColors.primaryColor,
+                              fontSize: 14.sp,
+                            ),
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: isSelected
+                                ? Colors.white
+                                : AppColors.primaryColor,
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+                );
+              }),
+            ),
+          );
+        },
+      ),
+    ],
+  );
 }
 
 class FilterController extends GetxController {
