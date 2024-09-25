@@ -3,14 +3,20 @@ import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
 //import 'package:cookpad/src/view/Home_views/home_view/review_View/review_View.dart';
 import 'package:cookpad/src/view/Home_views/profile_view/profile_widget/profileRow_Widget.dart';
+import 'package:cookpad/src/view/Home_views/profile_view/profile_widget/recipe_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// import '../../../common_widgets/selected_buttimport '../notificationAll_view/notificationAll_Widget/allButton_widget.dart';
+// on.dart';
+// import '../notificationAll_view/notificationAll_Widget/allButton_widget.dart';
+// import '../review_View/review_View.dart';
+// import '../saved_recipe/savedrecipe_widget/saved_container.dart';
 import '../../../common_widgets/selected_button.dart';
 import '../review_View/review_View.dart';
-import '../saved_recipe/savedrecipe_widget/saved_container.dart';
+import 'profile_widget/button_widget.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -280,14 +286,11 @@ body: Padding(
           ),
         ],
       ),
+
     ),
         SizedBox(height: 10,),
-        SavedContainer(path: Pic.burgr,txt:'Traditional spare \nribs baked' ,hght: 50,
-        txt1: 'By Chef John',),
-        SizedBox(height: 10,),
-        SavedContainer(path: Pic.burgr,txt:'spice roasted chicken \nwith flavored rice' ,hght: 50,
-          txt1: 'By Mark Kelvin',),
-    
+        check==1?RecipeWidget():check==2?ButtonWidget(txt:'Videos'):ButtonWidget(txt:'Tags'),
+
     ]
     ),
   ),

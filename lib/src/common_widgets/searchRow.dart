@@ -385,38 +385,40 @@ class SearchRow extends StatelessWidget {
       builder: (BuildContext context) {
         return Padding(
           padding: EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextWidget(
-                    txt: 'Filter Search',
-                    fntsze: 18,
-                    fntwt: FontWeight.w600,
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              TimeFilter(),
-              SizedBox(height: 10),
-              RateFilter(),
-              SizedBox(height: 10),
-              CategoryFilter(),
-              SizedBox(height: 10),
-              Center(
-                child: MyButton(
-                  width: 200,
-                  txt: 'Filter',
-                  clr: AppColors.primaryColor,
-                  ontap: () {
-                    Get.back(); // Apply filter and close bottom sheet
-                  },
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextWidget(
+                      txt: 'Filter Search',
+                      fntsze: 18,
+                      fntwt: FontWeight.w600,
+                    ),
+                  ],
                 ),
-              ),
-            ],
+                SizedBox(height: 10),
+                TimeFilter(),
+                SizedBox(height: 10),
+                RateFilter(),
+                SizedBox(height: 10),
+                CategoryFilter(),
+                SizedBox(height: 10),
+                Center(
+                  child: MyButton(
+                    width: 200,
+                    txt: 'Filter',
+                    clr: AppColors.primaryColor,
+                    ontap: () {
+                      Get.back(); // Apply filter and close bottom sheet
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -447,7 +449,7 @@ class RateFilter extends StatelessWidget {
     return _buildStarsFilter(
       context,
       "Rate",
-      ["1", "2", "3", "4", "5"],
+      ["5", "4", "3", "2", "1"],
       filterController.selectedRate,
       (index) => filterController.updateRate(index),
     );

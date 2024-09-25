@@ -3,11 +3,15 @@ import 'package:cookpad/src/common_widgets/selected_button.dart';
 import 'package:cookpad/src/common_widgets/text-widget.dart';
 import 'package:cookpad/src/constants/colors.dart';
 import 'package:cookpad/src/constants/pictures.dart';
+import 'package:cookpad/src/view/Home_views/home_view/home_widget/AllHome_Widget.dart';
 import 'package:cookpad/src/view/Home_views/home_view/home_widget/homewidget_one.dart';
 import 'package:cookpad/src/view/Home_views/home_view/home_widget/homewidget_two.dart';
 import 'package:cookpad/src/view/Home_views/home_view/home_widget/smallContainer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../profile_view/profile_widget/button_widget.dart';
+import '../profile_view/profile_widget/recipe_Widget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -71,39 +75,13 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
               SizedBox(height: 15,),
-              SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-                child: Row(children: [
-                  HomeWidgetOne(txt:'Classic Greek \n        Salad',txt1: '15 Mins',path: Pic.rice,),
-                  SizedBox(width: 10,),
-                  HomeWidgetOne(txt:'Crunchy Nut \n  Coleslaw',txt1: '10 Mins',path: Pic.bowl,),
-                  SizedBox(width: 10,),
-                  HomeWidgetOne(txt:'Classic Greek \n        Salad',txt1: '30 Mins',path: Pic.burgr,)
-                ],),
-              ),
-              SizedBox(height: 10,),
-              Row(mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextWidget(txt: 'New Recipes',fntsze: 16.sp,fntwt: FontWeight.w600,),
-                ],
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                 // mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    HomeWidgetTwo(txt: 'By James Milner',path: Pic.burgr,path1: Pic.boy,),
-                    HomeWidgetTwo(txt: 'By Laura',path: Pic.nodles,path1: Pic.boy,),
-                  ],
-                ),
-              )
-              
-          
-            ],
-          ),
-        ),
+    check==1?AllhomeWidget():check==2?ButtonWidget(txt:'Indian')
+        :check==3?ButtonWidget(txt:'Asian'):ButtonWidget(txt:'China'),
+
+          ]
       ),
+      )
+    )
     );
   }
 }
